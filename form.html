@@ -13,7 +13,6 @@
             max-width: 500px;
             height: fit-content;
             border-radius: 5px;
-            border: 1px solid rgb(212, 212, 212)
         }
 
         .enroll-label {
@@ -25,30 +24,29 @@
         }
 
         .text-input {
-            height: 30px;
+            height: 25px;
             border-radius: 5px;
-            border: 1px solid rgb(184, 183, 183);
+            border: 2px solid rgb(184, 183, 183);
             padding: 0.375rem 0.75rem;
             line-height: 1.5;
-            margin-bottom: 10px;
         }
 
         .text-input:focus-visible {
             outline: none !important;
-            border: 1px solid #719ECE;
+            border: 2px solid #719ECE;
         }
 
         .enroll-button {
             border: 0;
-            height: 50px;
+            height: 45px;
             color: #ffff;
-            font-weight: 600;
             font-size: 1.2rem;
             background-color: gray;
             border-radius: 5px;
             cursor: pointer;
-            max-width: 200px;
-            transition: boxShadow 0.4s ease;
+            letter-spacing: 1px;
+            max-width: 170px;
+            transition: all 0.4s ease;
         }
 
         .enroll-button:disabled {
@@ -60,7 +58,7 @@
         }
 
         .enroll-button:hover {
-            box-shadow: 0 10px 20px rgba(117, 119, 125, 0.3);
+            background-color: rgb(101, 101, 101);
         }
 
         .empty-input{
@@ -68,24 +66,24 @@
         }
 
         .enroll-success {
-            padding-left: 30px;
-            padding-top: 10px;
-            padding-bottom: 10px;
+            padding: 10px;
             height: 50px;
             align-items: center;
             background-color: #d8e8f9;
             display: none;
             color: #5d81a9;
             font-family: sans-serif;
-            border-radius: 10px;
+            border-radius: 5px;
         }
 
         .enroll-warning {
-            color: red;
-            font-size: 0.8rem;
+            color: #721c24;
+            height: 50px;
+            background-color: #f8d7da;
+            padding: 10px;
+            align-items: center;
+            border-radius: 5px;
             font-family: sans-serif;
-            margin-top: -20px;
-            font-weight: 600;
             display: none;
         }
         
@@ -94,11 +92,11 @@
 <body>
     <form class="enroll-form" action="post">
         <div class="enroll-success">Спасибо, ваше сообщение успешно отправлено</div>
+        <div class="enroll-warning">Перед отправкой заполните все поля</div>
         <label class="enroll-label" for="name">Ваше имя</label>
         <input class="text-input" id="name" type="text">
         <label class="enroll-label" for="mobile">Ваш телефон</label>
         <input class="text-input" id="mobile" type="tel">
-        <div class="enroll-warning">Перед отправкой заполните все поля</div>
         <button class="enroll-button">Отправить</button>
     </form>
     <script type="text/javascript" src="./form.js"></script>
